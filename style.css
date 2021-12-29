@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+:root {
+	--primary-color: #066;
+	--secondary-color: #6ff;
+	--light-color: #def;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: var(--light-color);
+	font-family: 'Lato', sans-serif;
+	padding: 2rem;
+}
+
+input {
+	font-family: inherit;
+	font-size: 20px;
+	font-weight: bold;
+	color: var(--primary-color);
+	background-color: inherit;
+	border: 0;
+	outline: 0;
+	text-align: right;
+}
+
+.inner-container {
+	background-color: #fff;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: 1fr 1fr;
+	border-radius: 15px;
+	padding: 1rem;
+}
+
+.parameters {
+	padding: 10px;
+}
+
+.msg {
+	color: red;
+	font-size: 14px;
+}
+
+.parameters h3 {
+	font-size: 17px;
+	color: #555;
+	margin-bottom: 5px;
+}
+
+.bill, .tip {
+	margin-bottom: 1rem;
+}
+
+.bill .form-control,
+ .tip .form-control,
+  .people .form-control {
+	display: flex;
+	background-color: #f6f6f6;
+	padding: 5px;
+	font-size: 16px;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 5px;
+	margin-top: 2px;
+}
+
+.bill .form-control span, 
+ .tip .form-control {
+	color: #aaa;
+}
+
+.tip .buttons {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 10px;
+	margin-bottom: 5px;
+}
+
+.tip .buttons .btn {
+	padding: 5px 15px;
+	border-radius: 5px;
+	background-color: var(--primary-color);
+	color: #fff;
+	cursor: pointer;
+	font-size: 17px;
+	font-weight: bold;
+	font-family: inherit;
+	outline: 0;
+	border: 0;
+}
+
+.tip .buttons .btn:last-child {
+	background-color: #f1f1f1;
+	color: var(--primary-color);
+}
+
+.tip .buttons .btn:hover {
+	opacity: 0.8;
+}
+
+.tip .buttons .btn.active {
+	color: var(--primary-color);
+	background-color: var(--secondary-color);
+}
+
+.tip .form-control {
+	display: none;
+	transition: all 0.5s ease;
+}
+
+.people span {
+	width: 20px;
+}
+
+.results {
+	background-color: var(--primary-color);
+	padding: 20px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.tip-amount,
+ .total {
+ 	display: flex;
+ 	justify-content: space-between;
+ 	align-items: center;
+ 	margin-bottom: 1rem;
+ }
+
+ .tip-amount > div:first-child h4,
+  .total > div:first-child h4{
+ 	color: #fff;
+ 	font-size: 14px;
+ }
+
+ .tip-amount > div:first-child p,
+  .total > div:first-child p {
+ 	color: var(--light-color);
+ 	font-size: 12px;
+ }
+
+ .tip-amount .price,
+  .total .price {
+ 	color: var(--secondary-color);
+ 	font-size: 25px;
+ 	display: flex;
+ 	align-items: center;
+ }
+
+ .tip-amount .price span,
+  .total .price span {
+ 	font-size: 35px;
+ }
+
+.results > div:last-child {
+	display: flex;	
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.results > div:last-child .btn {
+	width: 100%;
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: bold;
+	font-family: inherit;
+	outline: 0;
+	border: 0;
+	margin-bottom: 5px;
+	padding: 5px;
+	cursor: pointer;
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+}
+
+.results > div:last-child .btn:hover {
+	opacity: 0.8;
+}
+
+@media (max-width: 500px) {
+	.inner-container {
+		grid-template-columns: 1fr;
+	}
+}
